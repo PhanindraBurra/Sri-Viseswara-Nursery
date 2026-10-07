@@ -1,27 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" width="540" height="120" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="340" height="70" fill="none">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&amp;family=Inter:wght@600;700&amp;display=swap');
-      .title-text {
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&amp;family=Inter:wght@700&amp;display=swap');
+      .logo-title-main {
         font-family: 'Poppins', -apple-system, sans-serif;
         font-weight: 800;
-        font-size: 24px;
+        font-size: 21px;
         fill: #1B5E20;
         letter-spacing: -0.2px;
       }
-      .sub-main {
-        font-family: 'Inter', -apple-system, sans-serif;
+      .logo-title-sub {
+        font-family: 'Poppins', -apple-system, sans-serif;
         font-weight: 700;
-        font-size: 13px;
+        font-size: 14px;
         fill: #2E7D32;
-        letter-spacing: 1.2px;
-      }
-      .sub-info {
-        font-family: 'Inter', -apple-system, sans-serif;
-        font-weight: 600;
-        font-size: 11px;
-        fill: #64748B;
-        letter-spacing: 0.5px;
+        letter-spacing: 3.5px;
       }
     </style>
     <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -35,24 +28,21 @@
       <stop offset="100%" stop-color="#F57F17" />
     </linearGradient>
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1B5E20" flood-opacity="0.2"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#1B5E20" flood-opacity="0.2"/>
     </filter>
   </defs>
 
   <!-- Emblem Icon -->
-  <g transform="translate(10, 10)" filter="url(#shadow)">
-    <circle cx="50" cy="50" r="46" fill="#F0F9F1"/>
-    <circle cx="50" cy="50" r="42" stroke="url(#goldGrad)" stroke-width="3" stroke-dasharray="6 4" fill="none"/>
-    <path d="M50 10 C65 26 74 44 74 58 C74 72 64 84 50 88 C36 84 26 72 26 58 C26 44 35 26 50 10 Z" fill="url(#leafGrad)"/>
-    <path d="M50 84 V 36 C50 36 62 43 62 55 C62 67 50 84 50 84 Z" fill="url(#goldGrad)"/>
-    <path d="M50 84 V 41 C50 41 38 47 38 57 C38 68 50 84 50 84 Z" fill="#81C784"/>
-    <path d="M50 86 V 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <g transform="translate(5, 5)" filter="url(#shadow)">
+    <circle cx="30" cy="30" r="28" fill="#F0F9F1"/>
+    <circle cx="30" cy="30" r="25" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="4 3" fill="none"/>
+    <path d="M30 6 C39 16 45 27 45 35 C45 44 39 51 30 54 C21 51 15 44 15 35 C15 27 21 16 30 6 Z" fill="url(#leafGrad)"/>
+    <path d="M30 51 V 22 C30 22 37 26 37 34 C37 41 30 51 30 51 Z" fill="url(#goldGrad)"/>
+    <path d="M30 51 V 25 C30 25 23 29 23 35 C23 42 30 51 30 51 Z" fill="#81C784"/>
+    <path d="M30 52 V 17" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
   </g>
 
-  <!-- Single Unified Title Element (Identical Color #1B5E20 & Identical Font) -->
-  <text x="118" y="52" class="title-text">SRI VISESWARA &amp; SAINATH</text>
-
-  <!-- Subtitle Lines -->
-  <text x="118" y="78" class="sub-main">PLANT NURSERY • RAJAHMUNDRY &amp; KADIAM</text>
-  <text x="118" y="96" class="sub-info">Govt. Verified | Wholesale &amp; Retail Grafts | AP, India</text>
+  <!-- Main Clean Title: SRI VISESWARA NURSERY -->
+  <text x="74" y="34" class="logo-title-main">SRI VISESWARA</text>
+  <text x="75" y="53" class="logo-title-sub">NURSERY</text>
 </svg>

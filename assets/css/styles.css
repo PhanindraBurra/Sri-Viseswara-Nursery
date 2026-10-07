@@ -1,11 +1,10 @@
 /* ==========================================================================
-   Sri Viseswara & Sainath Nursery - Complete Modern Styling System
-   Brand Palette: Deep Forest Green (#1B5E20), Emerald (#2E7D32), Warm Gold (#F57F17)
-   Typography: 'Poppins' for Headings, 'Inter' for Body Text
+   Sri Viseswara Nursery - Main Stylesheet
+   Brand Colors: Deep Forest Green (#1B5E20), Emerald (#2E7D32), Warm Gold (#F57F17)
+   Fonts: 'Poppins' for Headings, 'Inter' for Body Text
    ========================================================================== */
 
 :root {
-  /* Brand Colors */
   --primary-dark: #0D3813;
   --primary-color: #1B5E20;
   --primary-medium: #2E7D32;
@@ -28,22 +27,19 @@
   
   --bg-body: #F8FAFC;
   --bg-card: #FFFFFF;
-  --bg-glass: rgba(255, 255, 255, 0.95);
+  --bg-glass: rgba(255, 255, 255, 0.96);
   --border-color: #E2E8F0;
   --border-mint: #C8E6C9;
 
-  /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 6px 16px rgba(15, 23, 42, 0.08);
   --shadow-lg: 0 12px 28px rgba(27, 94, 32, 0.12);
   --shadow-xl: 0 24px 48px rgba(13, 56, 19, 0.18);
 
-  /* Fonts */
   --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Geometry & Tokens */
-  --header-height: 84px;
+  --header-height: 80px;
   --container-max: 1280px;
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -106,9 +102,7 @@ button, input, select, textarea {
   padding: 0 1.5rem;
 }
 
-/* --------------------------------------------------------------------------
-   Keyframe Animations & Reveal Utilities
-   -------------------------------------------------------------------------- */
+/* Animations */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(35px); }
   to { opacity: 1; transform: translateY(0); }
@@ -217,9 +211,7 @@ button, input, select, textarea {
   gap: 0.25rem;
 }
 
-.top-link:hover {
-  color: #FFF;
-}
+.top-link:hover { color: #FFF; }
 
 .header {
   position: sticky;
@@ -235,7 +227,7 @@ button, input, select, textarea {
 
 .header.scrolled {
   box-shadow: var(--shadow-md);
-  height: 72px;
+  height: 70px;
   background: rgba(255, 255, 255, 0.98);
 }
 
@@ -244,39 +236,40 @@ button, input, select, textarea {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  gap: 1.5rem;
 }
 
 .logo-brand {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   flex-shrink: 0;
 }
 
 .logo-img {
-  height: 52px;
+  height: 46px;
   width: auto;
-  max-width: 100%;
   transition: var(--transition-fast);
 }
 
 .header.scrolled .logo-img {
-  height: 44px;
+  height: 40px;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.5rem;
   list-style: none;
+  margin: 0;
 }
 
 .nav-link {
-  font-size: 0.925rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-secondary);
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
+  white-space: nowrap;
 }
 
 .nav-link::after {
@@ -305,6 +298,7 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-shrink: 0;
 }
 
 /* Custom Buttons */
@@ -313,8 +307,8 @@ button, input, select, textarea {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.65rem 1.4rem;
-  font-size: 0.9rem;
+  padding: 0.6rem 1.3rem;
+  font-size: 0.885rem;
   font-weight: 600;
   border-radius: var(--radius-md);
   border: none;
@@ -373,7 +367,7 @@ button, input, select, textarea {
 }
 
 .btn-sm {
-  padding: 0.45rem 0.95rem;
+  padding: 0.45rem 0.9rem;
   font-size: 0.825rem;
   border-radius: var(--radius-sm);
 }
@@ -1135,8 +1129,17 @@ button, input, select, textarea {
 .floating-whatsapp:hover { transform: scale(1.12); }
 
 /* ==========================================================================
-   TABLET & MOBILE RESPONSIVE BREAKPOINTS
+   TABLET & MOBILE RESPONSIVE BREAKPOINTS (ZERO OVERLAP RULES)
    ========================================================================== */
+@media (max-width: 1200px) {
+  .nav-menu {
+    gap: 1rem;
+  }
+  .nav-link {
+    font-size: 0.85rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .header-container {
     padding: 0 1rem;
@@ -1157,7 +1160,7 @@ button, input, select, textarea {
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
   .hero-actions {
@@ -1188,26 +1191,9 @@ button, input, select, textarea {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   :root {
-    --header-height: 70px;
-  }
-
-  .top-bar-info {
-    font-size: 0.75rem;
-  }
-
-  /* Logo scaling on mobile view */
-  .logo-img {
-    height: 34px !important;
-  }
-
-  .header-cta-group .btn-outline {
-    display: none; /* Hide secondary call button on header for extra space */
-  }
-
-  .hamburger {
-    display: flex;
+    --header-height: 72px;
   }
 
   .nav-menu {
@@ -1229,8 +1215,30 @@ button, input, select, textarea {
     left: 0;
   }
 
+  .hamburger {
+    display: flex;
+  }
+
+  .header-cta-group .btn-outline {
+    display: none;
+  }
+
+  .logo-img {
+    height: 36px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-img {
+    height: 32px !important;
+  }
+
+  .top-bar-info {
+    font-size: 0.75rem;
+  }
+
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
 
   .hero-description {
@@ -1238,7 +1246,7 @@ button, input, select, textarea {
   }
 
   .hero-media-img {
-    height: 250px;
+    height: 240px;
   }
 
   .hero-floating-card {
@@ -1251,7 +1259,7 @@ button, input, select, textarea {
   }
 
   .section-title {
-    font-size: 1.65rem;
+    font-size: 1.6rem;
   }
 
   .plants-grid {
@@ -1263,7 +1271,7 @@ button, input, select, textarea {
   }
 
   .calc-box {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .calc-results-card {
@@ -1276,12 +1284,12 @@ button, input, select, textarea {
   }
 
   .contact-info-card {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+    gap: 1.5rem;
   }
 
   .footer-bottom {
@@ -1291,20 +1299,20 @@ button, input, select, textarea {
   }
 
   .floating-whatsapp {
-    width: 52px;
-    height: 52px;
-    bottom: 1.25rem;
-    right: 1.25rem;
+    width: 50px;
+    height: 50px;
+    bottom: 1rem;
+    right: 1rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .logo-img {
-    height: 30px !important;
+    height: 28px !important;
   }
 
   .hero-title {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
 
   .stats-grid {
